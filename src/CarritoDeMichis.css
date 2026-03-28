@@ -187,6 +187,11 @@ body {
     border: 2px solid var(--rosa-pastel);
 }
 
+.enlace-carrito-global {
+    text-decoration: none; /* Quita el subrayado azul */
+    color: inherit;        /* Hereda el color del texto */
+}
+
 /* 6. SECCIÓN DE LA TABLA  */
 .seccion-tabla {
     border-radius: 20px;
@@ -406,6 +411,20 @@ input[type="reset"] {
     cursor: pointer;
 }
 
+.volver-pago {
+    text-align: center;
+}
+
+.volver-pago a {
+    font-size: 0.8em;
+    color: gray;
+    text-decoration: none;
+}
+
+.volver-pago a:hover {
+    text-decoration: underline;
+}
+
 /* LISTA RESUMEN DEL CARRITO*/
 .lista-resumen {
     list-style: none;
@@ -415,6 +434,19 @@ input[type="reset"] {
 
 .lista-resumen li::before {
     content: "🐾 ";
+}
+
+.botones-resumen {
+    margin-top: 20px;
+}
+
+.enlace-caja {
+    text-decoration: none;
+}
+
+.enlace-volver {
+    text-decoration: none;
+    text-align: center;
 }
 
 .michi-pago {

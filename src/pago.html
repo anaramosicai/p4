@@ -12,7 +12,7 @@
         <h1 class="titulo">Formulario de Adopción</h1>
     </header>
 
-    <article class="caja-adopta" style="max-width: 600px; margin: 20px auto;">
+    <article class="caja-adopta caja-pago-contenedor">
         <form action="index.html" method="get" class="formulario-pago">
 
             <h2>Detalles de la Entrega</h2>
@@ -65,7 +65,7 @@
                 </p>
 
                 <p>Extras incluidos:</p>
-                <ul style="list-style: none; padding: 0;">
+                <ul class="lista-extras">
                     <li>
                         <input type="checkbox" id="extra1" name="snack" />
                         <label for="extra1">Pack de Snacks</label>
@@ -85,29 +85,27 @@
                 </p>
                 <p>
                     <label for="instrucciones">Instrucciones especiales para el repartidor:</label><br>
-                    <textarea id="instrucciones" name="instrucciones" rows="4" style="width: 90%;"
+                    <textarea id="instrucciones" name="instrucciones" rows="4" class="textarea-pago"
                         required>No toques el timbre fuerte, que el michi se asusta.</textarea>
                 </p>
             </fieldset>
 
-            <div class="botones-form" style="margin-top: 20px;">
-                <input type="submit" value="Confirmar Compra 🐾" class="boton-add" style="cursor:pointer;">
-                <input type="reset" value="Limpiar Formulario" class="boton-cancelar" style="cursor:pointer;">
+            <div class="botones-form botones-contenedor-pago">
+                <input type="submit" value="Confirmar Compra 🐾" class="boton-add">
+                <input type="reset" value="Limpiar Formulario" class="boton-cancelar">
             </div>
 
-            <p style="text-align: center;">
-                <a href="index.html" style="font-size: 0.8em; color: gray;">← Abandonar y volver</a>
+            <p class="volver-pago">
+                <a href="index.html">← Abandonar y volver</a>
             </p>
         </form>
     </article>
 
     <script>
-        // Limpiar carrito solo si pulsa el botón de cancelar con la clase específica
         document.querySelector('.boton-cancelar').addEventListener('click', () => {
             localStorage.removeItem('misMichis');
         });
 
-        // Limpiar al confirmar la compra
         document.querySelector('.formulario-pago').addEventListener('submit', () => {
             localStorage.removeItem('misMichis');
         });
@@ -116,7 +114,6 @@
     <footer class="pie">
         <p>&copy; 2026 Michis Store - Hecho con ♡ para amantes de los michis</p>
     </footer>
-    
 </body>
 
 </html>

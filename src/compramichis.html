@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <!--PARA LA PÁGINA CARRITO-->
     <header class="cabecera">
         <h1 class="titulo">Tu Carrito en Grande</h1>
     </header>
@@ -34,10 +33,10 @@
             </ul>
             <img src="https://www.shutterstock.com/image-photo/cute-small-blue-tortie-british-600nw-1707251014.jpg"
                 alt="Carrito Michi" class="michi-pago">
-            <div class="botones-form" style="margin-top: 20px;">
-                <a href="pago.html" class="boton-add" style="text-decoration: none;">Ir a la Caja 🐾</a>
-                <a href="index.html" class="boton-cancelar"
-                    style="text-decoration: none; text-align: center;">Seguir comprando</a>
+
+            <div class="botones-form botones-resumen">
+                <a href="pago.html" class="boton-add enlace-caja">Ir a la Caja 🐾</a>
+                <a href="index.html" class="boton-cancelar enlace-volver">Seguir comprando</a>
             </div>
         </article>
 
@@ -60,7 +59,6 @@
         </aside>
     </div>
 
-    <!--JS PARA LÓGICA DE "AÑADIDO" (parchear para hacerlo estático)-->
     <script>
         const lista = document.getElementById('lista-dinamica');
         const datos = JSON.parse(localStorage.getItem('misMichis')) || [];
@@ -70,7 +68,6 @@
         } else {
             datos.forEach(michi => {
                 const li = document.createElement('li');
-                // Ahora mostramos también la cantidad guardada
                 li.textContent = `${michi.nombre} x${michi.cantidad} - ${michi.precio * michi.cantidad}€`;
                 lista.appendChild(li);
             });
