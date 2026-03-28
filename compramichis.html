@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CarritosDeMichis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CarritoDeMichis.css">
+    <style>
+        /* Tema 4: CSS */
+    </style>
+    <script>/* Tema 5: JavaScript */</script>
+</head>
+
+<body>
+    <!--PARA LA PÁGINA CARRITO-->
+    <header class="cabecera">
+        <h1 class="titulo">Tu Carrito en Grande</h1>
+    </header>
+
+    <div class="rejilla-superior">
+        <aside class="cajas-anuncios">
+            <p>✨ Oferta Especial ✨</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6NrUfVO7dcOqGG2IfMlQgpQQxjbBjWYBeqw&s"
+                alt="Publicidad Michi">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6NrUfVO7dcOqGG2IfMlQgpQQxjbBjWYBeqw&s"
+                alt="Publicidad Michi">
+            <small>¡Snacks gratis con tu primer michi!</small>
+        </aside>
+
+        <article class="caja-adopta">
+            <h3>Resumen de tu pedido</h3>
+            <ul id="lista-dinamica" class="lista-resumen">
+            </ul>
+            <img src="https://www.shutterstock.com/image-photo/cute-small-blue-tortie-british-600nw-1707251014.jpg"
+                alt="Carrito Michi" class="michi-pago">
+            <div class="botones-form" style="margin-top: 20px;">
+                <a href="pago.html" class="boton-add" style="text-decoration: none;">Ir a la Caja 🐾</a>
+                <a href="webcarrito.html" class="boton-cancelar"
+                    style="text-decoration: none; text-align: center;">Seguir comprando</a>
+            </div>
+        </article>
+
+        <aside class="cajas-anuncios">
+            <p>🐱 Michi-Consejo</p>
+            <div class="michi-video-card">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mycatlife7/video/7273621901631606059"
+                    data-video-id="7273621901631606059">
+                    <section>
+                        <a target="_blank" title="♬ original sound - Diana y los Michis"
+                            href="https://www.tiktok.com/music/original-sound-7273621945831164714?refer=embed">
+                            ♬ original sound - Diana y los Michis
+                        </a>
+                    </section>
+                </blockquote>
+            </div>
+
+            <script async src="https://www.tiktok.com/embed.js"></script>
+            <small>Recuerda: Un michi feliz es un michi con cajas de cartón.</small>
+        </aside>
+    </div>
+
+    <!--JS PARA LÓGICA DE "AÑADIDO" (parchear para hacerlo estático)-->
+    <script>
+        const lista = document.getElementById('lista-dinamica');
+        const datos = JSON.parse(localStorage.getItem('misMichis')) || [];
+
+        if (datos.length === 0) {
+            lista.innerHTML = "<li>El carrito está vacío /ᐠ ╥ ˕ ╥マ</li>";
+        } else {
+            datos.forEach(michi => {
+                const li = document.createElement('li');
+                // Ahora mostramos también la cantidad guardada
+                li.textContent = `${michi.nombre} x${michi.cantidad} - ${michi.precio * michi.cantidad}€`;
+                lista.appendChild(li);
+            });
+        }
+    </script>
+
+    <footer class="pie">
+        <p>&copy; 2026 Michis Store - Hecho con ♡ para amantes de los michis</p>
+    </footer>
+</body>
+
+</html>

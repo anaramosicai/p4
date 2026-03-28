@@ -1,0 +1,543 @@
+/* 1. VARIABLES PARA COLOR*/
+:root {
+    --rosa-pastel: #ebc3cc;
+    --amarillo-pastel: #fcfae7;
+    --blanco: #ffffff;
+    --rosa-enfasis: #e094be;
+    --rosa-oscuro: rgb(216, 100, 179);
+    --rosa-clarito: rgb(247, 230, 233);
+}
+
+/* 2. CONFIGURACIÓN DEL CUERPO (ESTRUCTURA VERTICAL) */
+body {
+    background-color: var(--rosa-pastel);
+    margin: 0;
+    padding: 20px;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Espaciado entre la cabecera, los bloques y la tabla */
+    min-height: 100vh;
+}
+
+/* 3. CABECERA */
+.cabecera {
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.titulo {
+    color: var(--rosa-enfasis);
+    font-size: 35px;
+    margin: 0;
+    text-shadow: 2px 2px white;
+    line-height: 1.2;
+}
+
+/* 4. ELEMENTO FLOTANTE */
+.michi-flotante {
+    position: fixed;
+    /* Para scroll flotante */
+    top: 150px;
+    /* Distancia desde la parte superior */
+    left: 0;
+    width: 250px;
+    z-index: 100;
+    /* Encima de todos los elementos*/
+    pointer-events: none;
+    /* No clics */
+
+    /* Valor negativo para ajustarlo más todavía */
+    margin-left: -71px;
+}
+
+/* 5. REJILLA DE BLOQUES SUPERIORES */
+.rejilla-superior {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    /* Dos filas: la primera de 250px (para menú/carrito) 
+     y la segunda automática/flexible */
+    grid-template-rows: auto auto;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Bloque Adopta */
+/* Estilo para el gato acostado dentro de la caja */
+/* Contenedor principal de la caja */
+.caja-adopta {
+    position: relative;
+    display: flex;
+    grid-column: 2;
+    flex-direction: column;
+    overflow: hidden; /* Asegura que nada se salga del borde redondeado */
+    padding-bottom: 0; /* Espacio para el gato al final */
+    justify-content: space-between;
+
+    grid-row: 1 / span 2;
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* El gato flexible que ocupa gran parte del ancho */
+.contenedor-michi-acostado {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Centra al gato */
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.contenedor-michi-acostado img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    /* Mantiene la proporción */
+    display: block;
+    transition: width 0.3s ease;
+    /* Efecto suave al redimensionar */
+}
+
+/* Ajuste para el vídeo responsive */
+.contenedor-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Relación 16:9 */
+    height: 0;
+    margin: 20px 0;
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--rosa-pastel);
+}
+
+/* Bloques info y anuncio */
+.caja-info,
+.caja-anuncio {
+    background-color: var(--rosa-clarito);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ajuste para el mapa y el gif */
+.caja-info iframe,
+.caja-anuncio img {
+    border-radius: 10px;
+    max-width: 100%;
+    border: 2px solid var(--rosa-pastel);
+}
+
+/* Bloque Menú */
+.caja-menu {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: var(--amarillo-pastel);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+.enlace-resaltado {
+    color: var(--rosa-enfasis) !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.enlace-resaltado:hover {
+    color: var(--rosa-oscuro) !important;
+}
+
+/* Bloque Carrito */
+.caja-carrito {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background-color: var(--amarillo-pastel);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+.caja-carrito img {
+    border-radius: 10px;
+    max-width:80%;
+    border: 2px solid var(--rosa-pastel);
+}
+
+/* 6. SECCIÓN DE LA TABLA  */
+.seccion-tabla {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    /* Margen lateral ajuste automático */
+    max-width: 90%;
+    /* Asegura margen lateral del 5% a cada lado (100 - 10 = 90) */
+    width: fit-content;
+    /* Contenedor mide = tabla*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    overflow-x: auto;
+    /* scroll caso movil*/
+}
+
+.tabla-michis {
+    min-width: 800px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 px;
+    /* no sé si está bien (0_espacio_px) pero queda chulo*/
+}
+
+.tabla-michis th {
+    background-color: var(--rosa-enfasis);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.tabla-michis td {
+    padding: 15px;
+    background-color: var(--amarillo-pastel);
+    border-bottom: 3px solid var(--rosa-pastel);
+}
+
+/* Redondear las esquinas de las filas */
+.tabla-michis th:first-child {
+    border-radius: 10px 10px 0 10px;
+}
+
+.tabla-michis th:last-child {
+    border-radius: 10px 10px 10px 0;
+}
+
+.tabla-michis td:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.tabla-michis td:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+/* Ajuste para imágenes de michis */
+.tabla-michis img {
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid var(--rosa-pastel);
+}
+
+/* Botón Añadir */
+.boton-add {
+    background-color: var(--rosa-enfasis);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.boton-add:hover {
+    background-color: var(--rosa-oscuro);
+    transform: scale(1.05);
+}
+
+/* 7. PARA OFERTAS */
+
+.rejilla-ofertas {
+    /* Estrechamos los anuncios laterales a 180px y el centro crece libremente */
+    grid-template-columns: 180px 1fr 180px !important; 
+    max-width: 95%; /* Permitimos que la web use casi todo el ancho de la pantalla */
+    gap: 15px;      /* Reducimos un poco el hueco entre columnas */
+}
+
+/* Ajustamos las imágenes de los anuncios para que no se deformen al ser más estrechos */
+.rejilla-ofertas .cajas-anuncios img {
+    width: 100%;
+    height: auto;
+}
+
+/* Forzamos a la tabla a ocupar todo su espacio asignado */
+.rejilla-ofertas .seccion-tabla {
+    width: 100%;
+    overflow-x: auto; /* Si aun así la pantalla es muy pequeña, saldrá un scroll interno en la tabla en lugar de romper el diseño */
+}
+
+/* Estilo para el botón de volver en la cabecera de ofertas */
+.enlace-volver-tienda {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: var(--rosa-clarito);
+    color: var(--rosa-oscuro);
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados tipo píldora */
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.enlace-volver-tienda:hover {
+    background-color: var(--blanco);
+    border-color: var(--rosa-pastel);
+    color: var(--rosa-enfasis);
+    transform: translateX(-5px); /* Pequeño movimiento a la izquierda al hacer hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* 8. PARA NAVEGACIÓN Y FORMULARIOS  */
+
+/* Enlaces generales */
+a {
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Estilo para el botón de ir a pagar */
+.boton-pago-enlace {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Contenedor del formulario */
+.contenedor-formulario {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+}
+
+.campo input,
+.campo select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--rosa-pastel);
+    font-family: inherit;
+}
+
+fieldset {
+    border: 2px solid var(--rosa-pastel);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fffdfd;
+}
+
+legend {
+    background-color: var(--rosa-enfasis);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.opciones-radio {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+/* Botones del formulario */
+input[type="submit"],
+input[type="reset"] {
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.botones-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.boton-cancelar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #decadc;
+    color: var(--rosa-oscuro);
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* LISTA RESUMEN DEL CARRITO*/
+.lista-resumen {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+.lista-resumen li::before {
+    content: "🐾 ";
+}
+
+.michi-pago {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;        /* Mantiene la proporción */
+    margin: 10px auto;   /* La centra horizontalmente */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); /* Sombra suave */
+    transition: transform 0.3s ease;
+}
+
+.michi-pago:hover {
+    transform: scale(1.1) rotate(-5deg); /* Efecto giro al pasar el ratón */
+}
+
+.cajas-anuncios {
+    background-color: var(--rosa-clarito);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 2px dashed var(--rosa-pastel);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.85em;
+}
+
+.cajas-anuncios img {
+    max-width: 100%;
+    border-radius: 20px;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor estilo "Card" para el TikTok */
+.michi-video-card {
+    width: 100%;
+    max-width: 220px; /* Tamaño ajustado al lateral */
+    margin: 10px auto;
+    border-radius: 25px; /* Bordes muy redondeados como en la imagen */
+    overflow: hidden; /* Esto es clave para que el vídeo respete la redondez */
+    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.4); /* Sombra rosada suave */
+    border: 3px solid rgb(227, 186, 186);
+    background: white;
+    height: 400px; /* Altura controlada */
+    display: flex;
+    justify-content: center;
+}
+
+.michi-video-card .tiktok-embed {
+    margin: -10px 0 0 0 !important; /* Ajuste para centrar */
+    transform: scale(1); /* Lo hacemos más pequeño */
+    transform-origin: top center;
+    width: 325px; /* Ancho base de TikTok antes del escalado */
+}
+
+/* 9. PARA NAVEGACIÓN (WEBS - interna externa) */
+nav {
+    background-color: var(--blanco);
+    padding: 15px;
+    border-radius: 50px;
+    /* Forma de píldora */
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--rosa-clarito);
+}
+
+nav a {
+    color: var(--rosa-oscuro);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: var(--rosa-clarito);
+    color: var(--rosa-enfasis);
+    transform: translateY(-2px);
+    opacity: 1;
+    /* Sobreescribimos el opacity 0.8 general */
+}
+
+/* Estilo especial para el separador "|" */
+nav span.separador {
+    color: var(--rosa-pastel);
+    margin: 0 5px;
+}
+
+
+
+/* 10. FOOTER  */
+.pie {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+    /* Empuja el footer al final */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.pie p {
+    margin: 0;
+    color: var(--rosa-enfasis);
+    font-weight: bold;
+}
+
+/* Boton "Volver arriba" */
+.pie a {
+    background-color: var(--rosa-clarito);
+    color: var(--rosa-oscuro);
+    padding: 1px 15px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    border: 1px solid var(--rosa-pastel);
+}
+
+.pie a:hover {
+    background-color: var(--rosa-enfasis);
+    color: white;
+}

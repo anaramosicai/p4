@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CarritosDeMichis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CarritoDeMichis.css">
+    <style>
+        /* Tema 4: CSS */
+    </style>
+    <script>/* Tema 5: JavaScript */</script>
+</head>
+
+<body>
+    <!--PARA LA PÁGINA PRINCIPAL-->
+    <header class="cabecera">
+        <h1 class="titulo"> ⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹ <br> Carrito De Michis <br> . ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁. </h1>
+    </header>
+
+    <nav>
+        <a href="ofertas.html">Ofertas</a>
+        <span class="separador">|</span>
+        <a href="#tabla-principal">Ver Michis</a>
+        <span class="separador">|</span>
+        <a href="https://es.wikipedia.org/wiki/Felis_silvestris_catus" target="_blank">
+            Wiki-Michi</a>
+    </nav>
+
+    <img src="https://png.pngtree.com/png-vector/20241012/ourmid/pngtree-cat-peeking-from-frame-png-image_14067902.png"
+        class="michi-flotante" alt="Michi decorativo">
+
+    <div class="rejilla-superior">
+        <aside class="caja-menu">
+            <h3>Menú</h3>
+            <p><a href="ofertas.html" class="enlace-resaltado">Ver Ofertas</a></p>
+            <p><a href="#tabla-principal" class="enlace-resaltado">Catálogo Completo</a></p>
+            <p><a href="https://madridsalud.es/salud-publica/bienestar-animal/informacion-adoptante-gatos/"
+                    target="_blank" class="enlace-resaltado">Información cuidados tras la adopción</a></p>
+        </aside>
+
+        <article class="caja-adopta">
+            <div class="contenido-adopta">
+                <h2>Adopta a tu nuevo amigo</h2>
+                <p>
+                    Gestionar la llegada de un nuevo compañero a casa es una decisión importante que requiere
+                    responsabilidad y compromiso.
+                    En nuestra tienda nos aseguramos de que cada michi encuentre el hogar que mejor se adapte a su
+                    personalidad y necesidades.
+                    Ofrecemos un proceso transparente donde la prioridad es siempre el bienestar del animal y la
+                    satisfacción del futuro dueño.
+                    Explora nuestro catálogo, conoce a los integrantes de nuestra comunidad y elige al que se convertirá
+                    en tu mejor aliado.
+                    Estamos aquí para asesorarte en cada paso del camino, desde la elección hasta los primeros días de
+                    convivencia en tu hogar.
+                </p>
+
+                <div class="contenedor-video">
+                    <iframe src="https://www.youtube.com/embed/2A2IgFQpDVg?si=oemfdvr6keQjBOUZ" title="Gatos jugando"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="contenedor-michi-acostado">
+                    <img src="https://png.pngtree.com/png-vector/20231129/ourmid/pngtree-cute-cat-lying-alone-pets-png-image_10756854.png"
+                        alt="Michi descansando">
+                </div>
+        </article>
+
+        <a href="compramichis.html" style="text-decoration: none; color: inherit;">
+            <aside class="caja-carrito">
+                <h3>Tu Carrito 🛒</h3>
+                <p id="cuenta-carrito">0 michis</p> <small>Ver detalles</small>
+                <img src="https://media.istockphoto.com/id/1206400189/es/foto/gato-empujando-carrito-de-la-compra.jpg?s=612x612&w=0&k=20&c=3YQA_ABlLb4FIM7Gm7XJZEhA-T1y_wYvKBQQPeADZoQ="
+                        alt="Michi comprando">
+            </aside>
+        </a>
+
+        <section class="caja-info">
+            <h4>Nuestra Ubicación</h4>
+            <p>"Pero no me gusta comprar online", no tienes escusa, ven a visitarnos: </p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.7429003175021!2d-3.7063982318454887!3d40.41328962513928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42262ec8ae51bd%3A0x230a1b3f69e74cc8!2sLa%20Gatoteca!5e0!3m2!1ses!2sus!4v1774568299892!5m2!1ses!2sus"
+                width="160" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <p>¡No te arrepentirás!
+                <br><br>
+                𝑴𝒆𝒐𝒘. ฅ(•- •マ
+                </br></br>
+            </p>
+        </section>
+
+        <section class="caja-anuncio">
+            <h4>¡Publicidad!</h4>
+            <p>Hay que ganarse el pan de alguna forma</p>
+            <img src="https://media1.tenor.com/m/RLthQ6DcOSQAAAAC/cat-dog-roblox-dance-el-gato-y-papu-perro-bailando.gif"
+                alt="Michi bailando" width="160" height="350">
+            <p>ฅ≽(•⩊ •マ≼</p>
+        </section>
+    </div>
+
+    <!--PARA LA TABLA-->
+    <section class="seccion-tabla" id="tabla-principal">
+        <table class="tabla-michis">
+            <thead>
+                <tr>
+                    <th>Michi</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://i.pinimg.com/236x/98/3b/c2/983bc2b504ff8cb23dbc44b2a877e918.jpg"
+                            alt="Angry Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Angry Michi</strong><br>Aunque no lo parezca es mimoso.<br>ദ്ദി（• ˕ •マ.ᐟ</br></td>
+                    <td>10.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Angry Michi" data-precio="10.00">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.pinimg.com/originals/11/1b/4f/111b4f9cdb7195460508be3e330fe39b.jpg"
+                            alt="Hungry Michi" width="100" height="130">
+                    </td>
+                    <td><strong>Hungry Michi</strong><br>Como se aprecia en la imagen, este michi es muy comilón ≽(•⩊
+                        •マ≼.</td>
+                    <td>15.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Hungry Michi" data-precio="15.00">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoLIyuHT_Jq0gELOH8_UKwtOHAL9eR6GKv5g&s"
+                            alt="No Ears Michi" width="100" height="100">
+                    </td>
+                    <td><strong>No Ears Michi</strong><br>Mentira. Si tiene orejas (•˕ •マ.ᐟ.</td>
+                    <td>9.99 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="No Ears Michi" data-precio="9.99">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://pbs.twimg.com/profile_images/1309180352997527553/QD6OjJQ0_400x400.jpg"
+                            alt="Pikachu Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Pikachu Michi</strong><br>Simplemente, adorable <br>/ᐠ > ˕ <マ ₊ ̊⊹♡.</br>
+                    </td>
+                    <td>50.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Pikachu Michi" data-precio="50">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtodgjB2PGW_ZLg_3a3zFk5M6eay2Ucn97Yw&s"
+                            alt="Xmas Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Xmas Michi</strong><br>Qué puedo decir, adorable <br>/ᐠ > ˕ <マ ₊ ̊⊹♡.</br>
+                    </td>
+                    <td>50.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Xmas Michi" data-precio="50">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.scdn.co/image/ab6761610000517467ef3c7a2c31113250336971" alt="Numby Michi"
+                            width="100" height="100">
+                    </td>
+                    <td><strong>Numby Michi</strong><br>Al pobre le tomaron la foto recién levantado /ᐠ - ˕ -マ ᶻ 𝗓 𐰁.
+                    </td>
+                    <td>5.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Numby Michi" data-precio="5">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.pinimg.com/236x/dc/35/cc/dc35cca88be649b0016fb208d253c286.jpg"
+                            alt="Cocky Michi" width="100" height="180">
+                    </td>
+                    <td><strong>Cocky Michi</strong><br>Otra monada 𖹭 ≽ - ˕ •マฅ.</td>
+                    <td>25.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Cocky Michi" data-precio="25">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://pbs.twimg.com/profile_images/1430706116841951242/2SqZp37r_400x400.jpg"
+                            alt="Candy Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Candy Michi</strong><br>Mírenlo que chikito /ᐠ > ˕ <マ ₊˚⊹♡.</td>
+                    <td>3.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Candy Michi" data-precio="3">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://mobbyt.com/media/gallery/1633fadc980c3ce0690739fb249b7b1e/9e59cb5b_2022-10-13-mobbyt.jpeg"
+                            alt="Pana Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Pana Michi</strong><br>Michi Chill ദ്ദി（• ˕ •マ.ᐟ.</td>
+                    <td>35.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Pana Michi" data-precio="35">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=900,fit=cover/article/main-picture/601438ab1123e293197978.jpg"
+                            alt="Doggy Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Doggy Michi</strong><br>What! Se coló un galgo（• ˕ •マ.ᐟ.</td>
+                    <td>500.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Doggy Michi" data-precio="500">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.pinimg.com/236x/2c/ec/71/2cec71161268a2ef69288b5a4a210587.jpg"
+                            alt="Sad Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Sad Michi</strong><br>Adóptenlo y denle un abrazo /ᐠ ╥ ˕ ╥マ.</td>
+                    <td>0.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td><button class="boton-add" data-nombre="Sad Michi" data-precio="0">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://pbs.twimg.com/media/E-UpRbzWQAASHpR.jpg" alt="Black Michi" width="100"
+                            height="100">
+                    </td>
+                    <td><strong>Black Michi</strong><br>Negro ≽ ^⎚ ˕ ⎚^ ≼.</td>
+                    <td>10.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Black Michi" data-precio="10">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Txk6igdop_qKeKiZPd2hgMkCVzlvecVV0g&s"
+                            alt="Thursday Michi" width="100" height="100">
+                    </td>
+                    <td><strong>Thursday Michi</strong><br>Needs a bath /ᐠ - ˕ -マ.</td>
+                    <td>1.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td><button class="boton-add" data-nombre="Thursday Michi" data-precio="1">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.pinimg.com/236x/7b/8f/64/7b8f64a3fcb65ad986be19e015436136.jpg"
+                            alt="Michi Lisiado" width="100" height="100">
+                    </td>
+                    <td><strong>Michi Lisiado</strong><br>Pobre >^•-•^<.< /td>
+                    <td>11.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Michi Lisiado" data-precio="11">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://img.wattpad.com/3c8d6b3e7ecf84405c586e27509a71f1fbaae46f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5a704a66346f4a446166513565513d3d2d37342e313564646534386533663435393035333336313632313432323039382e6a7067?s=fit&w=720&h=720"
+                            alt="Michi Franchute" width="100" height="150">
+                    </td>
+                    <td><strong>Michi Franchute</strong><br>Oui Oui ₍^ >⩊< ^₎Ⳋ.</td>
+                    <td>11.00 €</td>
+                    <td>
+                        <select>
+                            <option>1 unidad</option>
+                            <option>2 unidades</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="boton-add" data-nombre="Michi Franchute" data-precio="11">
+                            Añadir ฅ^>⩊<^ฅ </button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="pie">
+        <p><a href="#">Volver arriba ▲</a></p>
+        <p>&copy; 2026 Michis Store - Hecho con ♡</p>
+    </footer>
+
+    <script src="carrito.js"></script>
+</body>
+
+</html>

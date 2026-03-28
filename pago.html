@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CarritoDeMichis.css">
+    <title>Finalizar Adopción</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1 class="titulo">Formulario de Adopción</h1>
+    </header>
+
+    <article class="caja-adopta" style="max-width: 600px; margin: 20px auto;">
+        <form action="webcarrito.html" method="get" class="formulario-pago">
+
+            <h2>Detalles de la Entrega</h2>
+
+            <fieldset>
+                <legend>Datos Personales del Humano</legend>
+                <p>
+                    <label for="name">Nombre Completo:</label><br>
+                    <input type="text" id="name" name="name" size="30" minlength="2" required
+                        placeholder="Ej. Michi Lover" />
+                </p>
+                <p>
+                    <label for="phone">Teléfono de contacto:</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" required placeholder="9 cifras" />
+                </p>
+                <p>
+                    <label for="email">Email (Gmail):</label><br>
+                    <input type="email" id="email" name="email" pattern=".+@gmail.com" size="30" required
+                        placeholder="usuario@gmail.com" />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Opciones de Michi-Envío</legend>
+                <p>
+                    <label for="tipo-envio">Método de transporte:</label><br>
+                    <select name="envio" id="tipo-envio">
+                        <option value="">--Selecciona transporte--</option>
+                        <option value="estandar">Transportín Estándar</option>
+                        <option value="premium">Cuna de Seda (Premium)</option>
+                        <option value="urgente">Envío Express "Miau"</option>
+                    </select>
+                </p>
+
+                <p>Tamaño del Transportín:</p>
+                <div class="opciones-radio">
+                    <input type="radio" id="sizeS" name="size" value="S" checked />
+                    <label for="sizeS">Pequeño (S)</label>
+
+                    <input type="radio" id="sizeM" name="size" value="M" />
+                    <label for="sizeM">Mediano (M)</label>
+
+                    <input type="radio" id="sizeL" name="size" value="L" />
+                    <label for="sizeL">Grande (L)</label>
+                </div>
+
+                <p>
+                    <label for="color-lazos">Color de los lazos decorativos:</label><br>
+                    <input type="color" id="color-lazos" name="color" value="#FFBFF8" />
+                </p>
+
+                <p>Extras incluidos:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>
+                        <input type="checkbox" id="extra1" name="snack" />
+                        <label for="extra1">Pack de Snacks</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="extra2" name="juguete" />
+                        <label for="extra2">Juguete de Plumas</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cita de Entrega</legend>
+                <p>
+                    <label for="fecha">Día de llegada:</label><br>
+                    <input type="date" id="fecha" name="fecha" min="2026-03-27" required />
+                </p>
+                <p>
+                    <label for="instrucciones">Instrucciones especiales para el repartidor:</label><br>
+                    <textarea id="instrucciones" name="instrucciones" rows="4" style="width: 90%;"
+                        required>No toques el timbre fuerte, que el michi se asusta.</textarea>
+                </p>
+            </fieldset>
+
+            <div class="botones-form" style="margin-top: 20px;">
+                <input type="submit" value="Confirmar Compra 🐾" class="boton-add" style="cursor:pointer;">
+                <input type="reset" value="Limpiar Formulario" class="boton-cancelar" style="cursor:pointer;">
+            </div>
+
+            <p style="text-align: center;">
+                <a href="webcarrito.html" style="font-size: 0.8em; color: gray;">← Abandonar y volver</a>
+            </p>
+        </form>
+    </article>
+
+    <script>
+        // Limpiar carrito solo si pulsa el botón de cancelar con la clase específica
+        document.querySelector('.boton-cancelar').addEventListener('click', () => {
+            localStorage.removeItem('misMichis');
+        });
+
+        // Limpiar al confirmar la compra
+        document.querySelector('.formulario-pago').addEventListener('submit', () => {
+            localStorage.removeItem('misMichis');
+        });
+    </script>
+
+    <footer class="pie">
+        <p>&copy; 2026 Michis Store - Hecho con ♡ para amantes de los michis</p>
+    </footer>
+    
+</body>
+
+</html>
